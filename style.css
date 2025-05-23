@@ -9,13 +9,31 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #f5f5f5;
   color: #222;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.4s ease, color 0.4s ease;
   scroll-behavior: smooth;
 }
 
 body.dark {
   background: #121212;
   color: #f5f5f5;
+}
+
+/* Scroll to Top Button */
+#scrollTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.3em;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Navbar */
@@ -25,6 +43,7 @@ body.dark {
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: background 0.3s ease;
 }
 
 .nav-container {
@@ -114,7 +133,7 @@ body.dark .nav-links li a {
   color: #f5f5f5;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -205,7 +224,7 @@ body.dark .project {
   font-weight: bold;
 }
 
-/* Form */
+/* Contact Form */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -248,7 +267,7 @@ body.dark footer {
   background: #181818;
 }
 
-/* Scroll Effects */
+/* Scroll Fade-In */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -258,4 +277,22 @@ body.dark footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Typewriter Animation */
+.typewriter {
+  overflow: hidden;
+  border-right: .1em solid #ff5722;
+  white-space: nowrap;
+  animation: typing 2.8s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #ff5722; }
 }
