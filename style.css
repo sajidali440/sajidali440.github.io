@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +32,12 @@ body.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
@@ -80,6 +85,7 @@ body.dark {
     width: 100%;
     padding: 20px;
   }
+
   .menu-toggle {
     display: block;
   }
@@ -95,7 +101,7 @@ body.dark .nav-links li a {
   color: #f5f5f5;
 }
 
-/* Hero / Header */
+/* Hero */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -136,22 +142,7 @@ body.dark .tagline {
   color: #ccc;
 }
 
-.links a {
-  display: inline-block;
-  margin: 10px 10px 0;
-  text-decoration: none;
-  background: #ff5722;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 5px;
-  transition: background 0.2s;
-}
-
-.links a:hover {
-  background: #e64a19;
-}
-
-/* Content Sections */
+/* Section Content */
 .content {
   padding: 40px 20px;
 }
@@ -165,7 +156,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Projects */
+/* Cards */
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +175,7 @@ h2 {
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 body.dark .project {
@@ -201,7 +192,7 @@ body.dark .project {
   font-weight: bold;
 }
 
-/* Contact Form */
+/* Form */
 form {
   max-width: 400px;
   margin: 0 auto;
