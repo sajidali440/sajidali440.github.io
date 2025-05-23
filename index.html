@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sajidali Momin - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="sajidali_profile.jpg" />
-</head>
 <body>
-  <div class="theme-toggle">
-    <button id="darkToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Sajidali</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Sajidali_Momin_Resume.pdf" download>Resume</a></li>
+      </ul>
+      <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </nav>
 
-  <header class="hero">
+  <header id="home" class="hero">
     <div class="container">
       <img src="sajidali_profile.jpg" alt="Sajidali Momin" class="profile-photo" />
       <h1>Sajidali Momin</h1>
       <p class="tagline">
-        <strong>Frontend Developer</strong> with a passion for clean design, responsive layouts, and user-centered solutions.
+        <strong>Frontend Developer</strong> focused on responsive, elegant, and efficient user experiences.
       </p>
       <div class="links">
-        <a href="Sajidali_Momin_Resume.pdf" download>Download Resume</a>
         <a href="https://sajidali440.blogspot.com" target="_blank">Visit Blog</a>
       </div>
     </div>
@@ -30,14 +30,14 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-list">
-        <div class="project">
+        <div class="project card">
           <h3>Live Weather App</h3>
-          <p>PWA using OpenWeather API, dark mode, and geolocation.</p>
+          <p>PWA with OpenWeather API, dark mode, and geolocation.</p>
           <a href="https://sajidali440.github.io/weather/" target="_blank">View Project</a>
         </div>
-        <div class="project">
+        <div class="project card">
           <h3>Student-Teacher Booking</h3>
-          <p>Firebase app for booking appointments between students and teachers.</p>
+          <p>Firebase appointment booking app with authentication.</p>
           <a href="https://studentteacherbooking-28a62.web.app" target="_blank">View Project</a>
         </div>
       </div>
@@ -61,14 +61,21 @@
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById("darkToggle").textContent = isDark ? "☀️" : "🌙";
+    }
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
     }
 
     window.onload = function () {
-      if (localStorage.getItem('theme') === 'dark') {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
         document.body.classList.add('dark');
+        document.getElementById("darkToggle").textContent = "☀️";
       }
     };
   </script>
 </body>
-</html>
