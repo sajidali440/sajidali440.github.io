@@ -11,13 +11,15 @@
   <!-- Responsive Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Sajidali</div>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="left-nav">
+        <div class="logo">Sajidali</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#resources">Resources</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="Sajidali_Momin_Resume.pdf" download>Resume</a></li>
       </ul>
       <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
     </div>
@@ -31,14 +33,28 @@
       <p class="tagline">
         <strong>Frontend Developer</strong> passionate about building clean, responsive, and user-focused web apps.
       </p>
-      <div class="links">
-        <a href="https://sajidali440.blogspot.com" target="_blank">Visit Blog</a>
-      </div>
     </div>
   </header>
 
-  <!-- Projects Section -->
+  <!-- Blog & Resume Section -->
   <main class="content">
+    <section id="resources">
+      <h2>Blog & Resume</h2>
+      <div class="project-list">
+        <div class="project card">
+          <h3>Visit My Blog</h3>
+          <p>Explore my tutorials, thoughts, and insights on web development.</p>
+          <a href="https://sajidali440.blogspot.com" target="_blank">Go to Blog</a>
+        </div>
+        <div class="project card">
+          <h3>My Resume</h3>
+          <p>Download my latest resume for internships and job opportunities.</p>
+          <a href="Sajidali_Momin_Resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
       <div class="project-list">
