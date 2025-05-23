@@ -2,60 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sajidali Momin – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sajidali Momin - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="sajidali_profile.jpg" />
 </head>
 <body>
-  <header>
-    <div class="logo">Sajidali</div>
-    <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <div class="theme-toggle">
+    <button id="darkToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <img src="sajidali_profile.jpg" alt="Sajidali Momin" class="profile-photo" />
+      <h1>Sajidali Momin</h1>
+      <p class="tagline">
+        <strong>Frontend Developer</strong> with a passion for clean design, responsive layouts, and user-centered solutions.
+      </p>
+      <div class="links">
+        <a href="Sajidali_Momin_Resume.pdf" download>Download Resume</a>
+        <a href="https://sajidali440.blogspot.com" target="_blank">Visit Blog</a>
+      </div>
+    </div>
   </header>
 
-  <section id="home" class="hero">
-    <div class="intro-text">
-      <h1>Sajidali Momin</h1>
-      <p><span class="highlight">Frontend Developer</span> with knowledge in web development and design. I build responsive, interactive, and clean web projects that focus on user experience and performance.</p>
-    </div>
-    <div class="intro-img">
-      <img src="sajidali_profile.jpg" alt="Sajidali Momin">
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>I’m currently pursuing a Bachelor of Science in Computer Science with a focus on frontend web technologies and full-stack development. I'm passionate about building modern websites and apps that solve real-world problems. Always open to internships, collaborations, and learning opportunities.</p>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Live Weather App</h3>
-        <p>A responsive PWA that shows live weather using OpenWeather API, dark mode, and geolocation.</p>
-        <a href="https://sajidali440.github.io/weather/" target="_blank">View Project</a>
+  <main class="content">
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Live Weather App</h3>
+          <p>PWA using OpenWeather API, dark mode, and geolocation.</p>
+          <a href="https://sajidali440.github.io/weather/" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+          <h3>Student-Teacher Booking</h3>
+          <p>Firebase app for booking appointments between students and teachers.</p>
+          <a href="https://studentteacherbooking-28a62.web.app" target="_blank">View Project</a>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Student-Teacher Booking</h3>
-        <p>A Firebase-based appointment booking app between students and teachers with authentication.</p>
-        <a href="https://studentteacherbooking-28a62.web.app" target="_blank">View Project</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:mominsajidali.play@gmail.com">mominsajidali.play@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/sajidali440" target="_blank">sajidali440</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/myzwbgzo" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Sajidali Momin. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    window.onload = function () {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    };
+  </script>
 </body>
 </html>
