@@ -1,118 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sajidali Momin - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sajidali Momin — Frontend Developer</title>
+  <meta name="description" content="Sajidali Momin — Frontend developer building responsive, accessible, and user-centered web apps. View projects, read the blog, or download my CV." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sajidali Momin — Frontend Developer" />
+  <meta property="og:description" content="Frontend developer building responsive, accessible, and user-centered web apps. View projects, read the blog, or download my CV." />
+  <meta property="og:url" content="https://sajidali440.github.io/" />
+  <meta property="og:image" content="https://sajidali440.github.io/sajidali_profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0d6efd" />
+
+  <link rel="canonical" href="https://sajidali440.github.io/" />
   <link rel="stylesheet" href="style.css" />
+
   <link rel="icon" type="image/png" href="sajidali_profile.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sajidali Momin",
+    "url": "https://sajidali440.github.io/",
+    "sameAs": [
+      "https://github.com/sajidali440",
+      "https://sajdaan.blogspot.com"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+
   <!-- Scroll to Top Button -->
-  <button id="scrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⏫</button>
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⏫</button>
 
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <div class="nav-container">
       <div class="left-nav">
-        <div class="logo">Sajidali</div>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="logo"><a href="/" aria-label="Home — Sajidali Momin">Sajidali</a></div>
+        <button class="menu-toggle" id="menuToggle" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">☰</button>
       </div>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#projects" class="nav-item">Projects</a></li>
         <li><a href="#resources" class="nav-item">Resources</a></li>
         <li><a href="#contact" class="nav-item">Contact</a></li>
       </ul>
-      <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+
+      <button id="darkToggle" class="dark-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
     </div>
   </nav>
 
   <!-- Hero -->
   <header id="home" class="hero fade-in">
     <div class="container">
-      <img src="sajidali_profile.jpg" alt="Sajidali Momin" class="profile-photo" />
-     <h1>Sajidali Momin</h1>
-<p class="tagline">
-  <strong>Frontend Developer</strong> focused on building responsive, accessible, and user-centered web applications with modern technologies and clean design principles.
-</p>
-
+      <img src="sajidali_profile.jpg" alt="Portrait of Sajidali Momin" class="profile-photo" loading="lazy" width="160" height="160" />
+      <h1><span id="typewriter-text" aria-live="polite">Sajidali Momin</span></h1>
+      <p class="tagline">
+        <strong>Frontend Developer</strong> focused on building responsive, accessible, and user-centered web applications with modern technologies and clean design principles.
+      </p>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="content">
+  <main id="maincontent" class="content">
     <!-- Blog + Resume -->
-    <section id="resources" class="fade-in">
+    <section id="resources" class="fade-in" tabindex="-1">
       <h2>Blog & Resume</h2>
       <div class="project-list">
-        <div class="project card">
+        <article class="project card">
           <h3>Visit My Blog</h3>
           <p>Explore tutorials and thoughts on web development.</p>
-          <a href="https://sajdaan.blogspot.com" target="_blank">Go to Blog</a>
-        </div>
-        <div class="project card">
+          <a href="https://sajdaan.blogspot.com" target="_blank" rel="noopener noreferrer">Go to Blog</a>
+        </article>
+
+        <article class="project card">
           <h3>My CV</h3>
           <p>Download my latest CV for internships and jobs.</p>
           <a href="sajidali_cv.pdf" download>Download CV</a>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="fade-in">
+    <section id="projects" class="fade-in" tabindex="-1">
       <h2>Projects</h2>
       <div class="project-list">
-        <div class="project card">
+        <article class="project card">
           <h3>Live Weather App</h3>
           <p>PWA with geolocation, dark mode, and OpenWeather API.</p>
-          <a href="https://sajidali440.github.io/weather/" target="_blank">View Project</a>
-        </div>
-        <div class="project card">
+          <a href="https://sajidali440.github.io/weather/" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+
+        <article class="project card">
           <h3>Student-Teacher Booking</h3>
           <p>Firebase-based app to manage appointments.</p>
-          <a href="https://studentteacherbooking-28a62.web.app" target="_blank">View Project</a>
-        </div>
+          <a href="https://studentteacherbooking-28a62.web.app" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="fade-in">
+    <section id="contact" class="fade-in" tabindex="-1">
       <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/myzwbgzo" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+      <form action="https://formspree.io/f/myzwbgzo" method="POST" class="contact-form" aria-label="Contact form">
+        <label class="sr-only" for="name">Your name</label>
+        <input id="name" type="text" name="name" placeholder="Your Name" required />
+
+        <label class="sr-only" for="email">Your email</label>
+        <input id="email" type="email" name="email" placeholder="Your Email" required />
+
+        <label class="sr-only" for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sajidali Momin. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Sajidali Momin. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      const isDark = document.body.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      document.getElementById("darkToggle").textContent = isDark ? "☀️" : "🌙";
-    }
-
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
-    }
-
-    window.onload = () => {
+  (function () {
+    // DOM ready
+    document.addEventListener('DOMContentLoaded', function () {
       // Theme
+      const body = document.body;
+      const darkToggle = document.getElementById('darkToggle');
       const saved = localStorage.getItem('theme');
       if (saved === 'dark') {
-        document.body.classList.add('dark');
-        document.getElementById("darkToggle").textContent = "☀️";
+        body.classList.add('dark');
+        darkToggle.textContent = '☀️';
+        darkToggle.setAttribute('aria-pressed', 'true');
       }
+
+      darkToggle.addEventListener('click', function () {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        darkToggle.textContent = isDark ? '☀️' : '🌙';
+        darkToggle.setAttribute('aria-pressed', String(isDark));
+      });
+
+      // Menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener('click', function () {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('show');
+      });
 
       // Scroll reveal
       const faders = document.querySelectorAll('.fade-in');
@@ -126,45 +173,49 @@
       }, { threshold: 0.1 });
       faders.forEach(el => observer.observe(el));
 
-      // ScrollSpy
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('.nav-item');
-      window.addEventListener('scroll', () => {
+      // ScrollSpy & scroll-to-top visibility
+      const sections = document.querySelectorAll('main section');
+      const navItems = document.querySelectorAll('.nav-item');
+      const scrollTopBtn = document.getElementById('scrollTop');
+
+      function onScroll() {
         let current = '';
         sections.forEach(section => {
           if (window.scrollY >= section.offsetTop - 120) {
             current = section.getAttribute('id');
           }
         });
-        navLinks.forEach(link => {
+        navItems.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('href').includes(current)) {
             link.classList.add('active');
           }
         });
-
-        // Scroll-to-top visibility
-        document.getElementById("scrollTop").style.display =
-          window.scrollY > 300 ? 'block' : 'none';
-      });
-
-      // Typewriter
-      const text = "Sajidali Momin";
-      let index = 0;
-      const typeTarget = document.getElementById("typewriter-text");
-      typeTarget.innerHTML = "";
-      function type() {
-        if (index < text.length) {
-          typeTarget.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(type, 100);
-        }
+        scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
       }
-      type();
-    };
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+
+      // Typewriter: only run if element exists
+      const typeTarget = document.getElementById('typewriter-text');
+      if (typeTarget) {
+        const text = 'Sajidali Momin';
+        let index = 0;
+        typeTarget.textContent = '';
+        (function type() {
+          if (index < text.length) {
+            typeTarget.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 80);
+          }
+        }());
+      }
+
+      // Dynamic year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  })();
   </script>
 </body>
 </html>
-
-
-
